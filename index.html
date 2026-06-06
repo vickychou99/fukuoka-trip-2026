@@ -192,6 +192,9 @@
   header h1 svg{width:27px;height:27px;vertical-align:-4px}
   #gotop svg{width:22px;height:22px}
   .badge svg{width:12px;height:12px;vertical-align:-1px}
+  /* 手機：停用雙擊縮放（避免切換圖片時畫面被放大），保留雙指縮放 */
+  #lb,#lb .stage,#lb img,#lb .nav-btn,#lb .close,#lb .dots i,
+  .thumbwrap,.lk,.map,.nav a,#gotop{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 </style>
 </head>
 <body id="top">
@@ -705,11 +708,15 @@
     cap=lb.querySelector('.cap'),count=lb.querySelector('.count'),dots=lb.querySelector('.dots'),
     prev=lb.querySelector('.prev'),next=lb.querySelector('.next');
   let cur=[],idx=0;
+  const pcache=new Set();
+  function preload(i){if(i<0||i>=cur.length)return;const u='images/'+cur[i];
+    if(pcache.has(u))return;pcache.add(u);const im=new Image();im.decoding='async';im.src=u;}
   function render(){
     lbImg.src='images/'+cur[idx];
     count.textContent=(idx+1)+' / '+cur.length;
     prev.disabled=idx===0; next.disabled=idx===cur.length-1;
     [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===idx));
+    preload(idx+1);preload(idx-1); // 預載前後張，切換更順
   }
   function openLB(gid,start,title){
     cur=IMGS[gid]||[];if(!cur.length)return;idx=start||0;
@@ -718,11 +725,17 @@
     if(cur.length>1)cur.forEach((_,i)=>{const d=document.createElement('i');
       d.addEventListener('click',()=>{idx=i;render();});dots.appendChild(d);});
     render();lb.classList.add('show');document.body.style.overflow='hidden';
+    cur.forEach((_,i)=>preload(i)); // 開啟時背景預載整本相簿
   }
   function closeLB(){lb.classList.remove('show');document.body.style.overflow='';}
   function go(d){idx=Math.min(cur.length-1,Math.max(0,idx+d));render();}
   prev.addEventListener('click',e=>{e.stopPropagation();go(-1);});
   next.addEventListener('click',e=>{e.stopPropagation();go(1);});
+  // 手機左右滑動切換（單指）
+  const stage=lb.querySelector('.stage');let tsx=0,tsy=0,tn=0;
+  stage.addEventListener('touchstart',e=>{tn=e.touches.length;tsx=e.changedTouches[0].clientX;tsy=e.changedTouches[0].clientY;},{passive:true});
+  stage.addEventListener('touchend',e=>{if(tn>1)return;const dx=e.changedTouches[0].clientX-tsx,dy=e.changedTouches[0].clientY-tsy;
+    if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)*1.5)go(dx<0?1:-1);},{passive:true});
   lb.querySelector('.close').addEventListener('click',closeLB);
   lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('stage'))closeLB();});
   addEventListener('keydown',e=>{if(!lb.classList.contains('show'))return;
