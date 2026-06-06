@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本沒裝滿不回家 · 福岡採購行 2026.06.10–06.14</title>
+<style>
+  :root{
+    --bg:#fff7f2; --card:#ffffff; --ink:#3a2e2a; --sub:#8a7a72;
+    --accent:#e8736f; --accent2:#f4a259; --line:#f0e3da; --good:#5aa777;
+    --shadow:0 6px 22px rgba(180,120,100,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  body{margin:0;font-family:-apple-system,"PingFang TC","Noto Sans TC","Segoe UI",sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px 90px}
+
+  header{background:linear-gradient(135deg,#e8736f,#f4a259);color:#fff;
+         padding:42px 18px 34px;text-align:center}
+  header h1{margin:0;font-size:30px;letter-spacing:1px}
+  header .sub{font-size:15px;opacity:.95;margin-top:8px}
+  header .pill{display:inline-block;background:rgba(255,255,255,.22);border-radius:999px;
+               padding:5px 16px;margin-top:14px;font-size:14px;font-weight:600}
+
+  /* sticky anchor nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,247,242,.92);
+       backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+       display:flex;gap:8px;overflow-x:auto;padding:10px 14px;-webkit-overflow-scrolling:touch}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{flex:0 0 auto;background:#fff;border:1px solid var(--line);border-radius:999px;
+         padding:6px 14px;font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap}
+  .nav a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+  /* collapsible section */
+  details.sec{margin-top:24px}
+  details.sec>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:9px;
+        font-size:20px;font-weight:700;padding:6px 0;user-select:none}
+  details.sec>summary::-webkit-details-marker{display:none}
+  details.sec>summary .chev{margin-left:auto;color:var(--sub);font-size:15px;transition:transform .2s}
+  details.sec[open]>summary .chev{transform:rotate(90deg)}
+  details.sec>summary .ic{font-size:22px}
+  .sec-body{padding-top:12px}
+
+  .grid{display:grid;gap:14px}
+  .g2{grid-template-columns:1fr 1fr}
+  @media(max-width:620px){.g2{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+        padding:18px;box-shadow:var(--shadow)}
+  .card h3{margin:0 0 8px;font-size:16px}
+  .card .meta{font-size:13.5px;color:var(--sub);line-height:1.6}
+  .kv{display:flex;gap:8px;font-size:14px;margin:3px 0;flex-wrap:wrap}
+  .kv b{min-width:62px;color:var(--sub);font-weight:600;flex-shrink:0}
+
+  .flight{display:flex;align-items:center;justify-content:space-between;gap:10px;
+          padding:10px 0;border-top:1px dashed var(--line)}
+  .flight:first-of-type{border-top:none}
+  .flight .ap{text-align:center}
+  .flight .ap .t{font-size:20px;font-weight:700}
+  .flight .ap .c{font-size:12.5px;color:var(--sub)}
+  .flight .mid{flex:1;text-align:center;color:var(--accent2);font-size:12px}
+  .flight .mid .ln{border-top:2px solid var(--line);position:relative;margin:6px 8px 2px}
+  .flight .mid .ln::after{content:"✈";position:absolute;right:-2px;top:-11px;color:var(--accent2)}
+  .tag{display:inline-block;font-size:11.5px;background:#fdeee9;color:var(--accent);
+       border-radius:6px;padding:2px 8px;margin:2px 4px 2px 0;font-weight:600}
+
+  .note{background:#fff3e8;border-left:4px solid var(--accent2);border-radius:10px;
+        padding:12px 14px;font-size:14px;margin:0}
+
+  /* category (collapsible) */
+  details.cat{margin-bottom:6px}
+  details.cat>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;
+        font-size:14.5px;font-weight:700;color:var(--accent);padding:10px 4px;
+        border-bottom:1px dashed var(--line);user-select:none}
+  details.cat>summary::-webkit-details-marker{display:none}
+  details.cat>summary .chev{margin-left:auto;color:var(--sub);font-size:13px;transition:transform .2s}
+  details.cat[open]>summary .chev{transform:rotate(90deg)}
+  details.cat>summary .cnt{color:var(--sub);font-weight:500;font-size:12.5px}
+  details.cat .grid{padding:12px 0 4px}
+
+  /* shopping checklist */
+  .shop{display:flex;gap:12px;align-items:flex-start;background:var(--card);
+        border:1px solid var(--line);border-radius:14px;padding:13px 14px;box-shadow:var(--shadow)}
+  .shop input{margin-top:24px;width:20px;height:20px;accent-color:var(--good);flex-shrink:0;cursor:pointer}
+  .shop .thumb{width:66px;height:66px;border-radius:11px;object-fit:cover;flex-shrink:0;
+        background:#f4ece6;border:1px solid var(--line)}
+  .shop .thumb.ph{display:flex;align-items:center;justify-content:center;font-size:30px}
+  .shop .body{flex:1;min-width:0}
+  .shop .body .t{font-weight:700;font-size:15.5px}
+  .shop .body .d{font-size:13.5px;color:var(--sub);margin-top:3px}
+  .lk{font-size:12.5px;margin-top:8px;margin-right:10px;display:inline-flex;align-items:center;gap:4px;
+        border:1px solid var(--line);border-radius:999px;padding:3px 11px;color:var(--accent);background:#fff}
+  .lk:hover{border-color:var(--accent);background:#fdeee9;text-decoration:none}
+  .map{font-size:13px;color:var(--good);font-weight:600;display:inline-flex;align-items:center;gap:4px;margin-top:6px}
+  .map:hover{text-decoration:underline}
+  .shop.done .body .t{text-decoration:line-through;color:var(--sub)}
+  .shop.done{opacity:.6}
+  .shop.done .thumb{filter:grayscale(.7)}
+
+  .reflist a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;
+             padding:12px 15px;margin-bottom:10px;box-shadow:var(--shadow);color:var(--ink)}
+  .reflist a:hover{border-color:var(--accent);text-decoration:none}
+  .reflist .t{font-weight:700;font-size:15px}
+  .reflist .d{font-size:13px;color:var(--sub);margin-top:2px}
+  .reflist .u{font-size:12px;color:var(--accent2);margin-top:4px;word-break:break-all}
+
+  footer{text-align:center;color:var(--sub);font-size:12.5px;margin-top:40px}
+  .reset{display:inline-block;margin:14px 0 0;font-size:12px;color:var(--sub);
+         border:1px solid var(--line);border-radius:999px;padding:5px 14px;cursor:pointer;background:#fff}
+
+  /* go to top */
+  #gotop{position:fixed;right:18px;bottom:22px;z-index:60;width:46px;height:46px;border-radius:50%;
+         border:none;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;
+         box-shadow:0 6px 18px rgba(232,115,111,.45);opacity:0;pointer-events:none;
+         transition:opacity .25s,transform .2s}
+  #gotop.show{opacity:1;pointer-events:auto}
+  #gotop:hover{transform:translateY(-3px)}
+
+  /* thumb badge + clickable */
+  .thumbwrap{position:relative;flex-shrink:0;cursor:zoom-in;line-height:0}
+  .thumbwrap .badge{position:absolute;right:4px;bottom:4px;background:rgba(0,0,0,.62);color:#fff;
+        font-size:11px;font-weight:600;line-height:1;padding:3px 6px;border-radius:7px;
+        display:flex;align-items:center;gap:3px}
+  .shop .thumb{cursor:zoom-in}
+  /* lightbox */
+  #lb{position:fixed;inset:0;z-index:100;background:rgba(20,12,10,.94);display:none;
+      flex-direction:column;align-items:center;justify-content:center;padding:18px}
+  #lb.show{display:flex}
+  #lb .stage{flex:1;display:flex;align-items:center;justify-content:center;width:100%;min-height:0;gap:10px}
+  #lb img{max-width:92vw;max-height:80vh;object-fit:contain;border-radius:10px;
+      box-shadow:0 10px 40px rgba(0,0,0,.5);user-select:none}
+  #lb .nav-btn{flex:0 0 auto;width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;
+      background:rgba(255,255,255,.15);color:#fff;font-size:24px;transition:background .15s}
+  #lb .nav-btn:hover{background:rgba(255,255,255,.3)}
+  #lb .nav-btn:disabled{opacity:.25;cursor:default}
+  #lb .top{position:absolute;top:14px;left:0;right:0;display:flex;align-items:center;
+      justify-content:space-between;padding:0 18px;color:#fff}
+  #lb .cap{font-size:14px;font-weight:600;max-width:78vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  #lb .count{font-size:13px;opacity:.85}
+  #lb .close{position:absolute;top:10px;right:12px;background:none;border:none;color:#fff;
+      font-size:30px;cursor:pointer;line-height:1}
+  #lb .dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:90vw;margin-top:12px}
+  #lb .dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);cursor:pointer}
+  #lb .dots i.on{background:#fff;transform:scale(1.25)}
+  @media(max-width:620px){#lb .nav-btn{position:absolute;bottom:18px;z-index:2}
+    #lb .nav-btn.prev{left:24px}#lb .nav-btn.next{right:24px}}
+
+
+  /* baby shopping map places */
+  .place{background:var(--card);border:1px solid var(--line);border-radius:14px;
+        padding:14px 16px;box-shadow:var(--shadow)}
+  .place .nm{font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  .place .rec{font-size:11px;font-weight:700;color:#fff;background:var(--good);
+        border-radius:6px;padding:2px 7px}
+  .place .d{font-size:13.5px;color:var(--sub);margin:5px 0 2px;line-height:1.6}
+  .place .maps{display:flex;gap:14px;flex-wrap:wrap}
+
+
+  /* food guide */
+  .ftype{font-size:14.5px;font-weight:800;color:var(--ink);margin:18px 0 2px;padding-left:2px}
+  .fplace{display:flex;gap:12px;align-items:flex-start;background:var(--card);
+        border:1px solid var(--line);border-radius:14px;padding:13px 14px;box-shadow:var(--shadow)}
+  .fplace .pbody{flex:1;min-width:0}
+  .fplace .thumb{width:66px;height:66px;border-radius:11px;object-fit:cover;flex-shrink:0;
+        background:#f4ece6;border:1px solid var(--line);cursor:zoom-in}
+  .fplace .thumb.ph{display:flex;align-items:center;justify-content:center;font-size:30px}
+  .fplace .nm{font-weight:700;font-size:15.5px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+  .fplace .src{font-size:10.5px;font-weight:700;color:#fff;background:var(--accent2);
+        border-radius:6px;padding:2px 7px;white-space:nowrap}
+  .fplace .addr{font-size:12.5px;color:var(--sub);margin-top:4px;line-height:1.55}
+  .fplace .dish{font-size:13.5px;color:var(--ink);margin-top:4px;line-height:1.55}
+  .fplace .dish b{color:var(--accent)}
+  .fplace .note2{font-size:12.5px;color:var(--sub);background:#fff3e8;border-radius:8px;
+        padding:6px 9px;margin-top:6px;line-height:1.55}
+  .fplace .maps{display:flex;gap:14px;flex-wrap:wrap;margin-top:7px}
+
+  .lk svg,.lk i{width:14px;height:14px}
+  .map svg,.map i{width:14px;height:14px;flex-shrink:0}
+</style>
+</head>
+<body id="top">
+
+<header>
+  <h1>🧳 日本沒裝滿不回家</h1>
+  <div class="sub">福岡 · 博多 親子採購行</div>
+  <div class="pill">2026 / 06 / 10（三）– 06 / 14（日）</div>
+</header>
+
+<!-- 🔖 快速導覽 -->
+<nav class="nav">
+  <a href="#flight">✈️ 機票</a>
+  <a href="#hotel">🏨 住宿</a>
+  <a href="#baby">👶 嬰幼兒</a>
+  <a href="#babymap">🗺️ 採購地圖</a>
+  <a href="#shoes">👟 鞋類</a>
+  <a href="#food">🍜 美食</a>
+  <a href="#note">📝 備註</a>
+  <a href="#ref">📚 參考</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ✈ 機票 -->
+  <details class="sec" open id="flight">
+    <summary><span class="ic">✈️</span>機票 · 長榮航空<span class="chev">▶</span></summary>
+    <div class="sec-body">
+      <div class="card">
+        <div class="flight">
+          <div class="ap"><div class="t">08:00</div><div class="c">桃園 T2</div></div>
+          <div class="mid"><div>BR 106 · 2h20m</div><div class="ln"></div><div>6/10（三）去程</div></div>
+          <div class="ap"><div class="t">11:20</div><div class="c">福岡 國際</div></div>
+        </div>
+        <div class="flight">
+          <div class="ap"><div class="t">19:20</div><div class="c">福岡 國際</div></div>
+          <div class="mid"><div>BR 101 · 2h25m</div><div class="ln"></div><div>6/14（日）回程</div></div>
+          <div class="ap"><div class="t">20:45</div><div class="c">桃園 T2</div></div>
+        </div>
+        <div style="margin-top:10px">
+          <span class="tag">去程行李 每人 1 件</span>
+          <span class="tag">回程行李 每人 2 件 🛍️</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- 🏨 飯店 -->
+  <details class="sec" open id="hotel">
+    <summary><span class="ic">🏨</span>住宿 · Forza 博多筑紫口<span class="chev">▶</span></summary>
+    <div class="sec-body">
+      <div class="card">
+        <h3>Hotel Forza Hakata-eki Chikushi-Guchi　<span style="font-weight:400;font-size:13px;color:var(--sub)">6/10 – 6/14</span></h3>
+        <div class="kv"><b>地址</b><span>〒812-0012 福岡県福岡市博多区博多駅中央街 4-16</span><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Forza+%E5%8D%9A%E5%A4%9A%E9%A7%85%E7%AD%91%E7%B4%AB%E5%8F%A3"><i data-lucide="map-pin"></i>地圖</a></div>
+        <div class="kv"><b>入住</b><span>14:00　｜　退房 11:00</span></div>
+        <div class="meta" style="margin-top:8px">
+          📍 博多車站筑紫口出站左轉步行 1 分鐘，鄰近地下美食街與伴手禮區<br>
+          🏪 樓下就有全家　☕ 大廳免費外帶咖啡、備品自取　💆 房間附按摩腰枕
+        </div>
+        <div class="note" style="margin-top:12px">
+          ⚠️ <b>6/13 換房型</b>：需於 6/13 上午 <b>11:00 前退房並寄放行李</b>，當天 <b>14:00 後</b>再入住新房間。
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- 🛒 採購清單 -->
+  <details class="sec" open id="shop">
+    <summary><span class="ic">🛒</span>採購清單<span class="chev">▶</span></summary>
+    <div class="sec-body">
+      <div style="font-size:13px;color:var(--sub);margin-bottom:6px">勾選自動保存於本機 · 點分類標題可收合</div>
+
+      <!-- 👶 嬰幼兒 -->
+      <details class="cat" open id="baby">
+        <summary>👶 嬰幼兒・親子用品 <span class="cnt">5 項</span><span class="chev">▶</span></summary>
+        <div class="grid">
+          <label class="shop">
+            <input type="checkbox" data-id="s1">
+            <img class="thumb" data-gid="s1" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">消暑四件組：涼墊 / 涼被 / 防曬披風 / 推車風扇</div>
+              <div class="d">夏天帶小孩必備消暑用品。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@orange_rabbit_jp/post/DYZECbbCdMm"><i data-lucide="external-link"></i>貼文</a>
+            </div>
+          </label>
+          <label class="shop">
+            <input type="checkbox" data-id="s2">
+            <img class="thumb" data-gid="s2" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">BabyHopper × 空調服 背巾遮陽罩</div>
+              <div class="d">底部內建專利風扇，循環外部空氣降溫、可放保冷劑，附 UV 防曬＋防潑水，背巾／推車皆可用。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@theo_select/post/DW1vSQVmScf"><i data-lucide="external-link"></i>貼文</a>
+            </div>
+          </label>
+          <label class="shop">
+            <input type="checkbox" data-id="s4">
+            <img class="thumb" data-gid="s4" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">3COINS 育兒好物</div>
+              <div class="d">學坐手持架、防漏水杯、餵藥器、遊戲墊、球池、便器訓練座、玩沙連身衣、家長折疊椅。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@fukuoka.life.gem/post/DZMwR8FFMXO"><i data-lucide="external-link"></i>貼文</a>
+              <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=3COINS+%E5%8D%9A%E5%A4%9A%E9%A7%85"><i data-lucide="map-pin"></i>3COINS 博多</a>
+            </div>
+          </label>
+          <label class="shop">
+            <input type="checkbox" data-id="s5">
+            <img class="thumb" data-gid="s5" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">BabyHopper 空調嬰兒披肩 R26（淺苔蘚色）</div>
+              <div class="d">型號 CKBH0153080，<b>約 JP¥5,008</b>。內建小型風扇灌入外氣降溫、附保冷凝膠，防 UV＋防潑水；4 顆 5 號電池，強約 8.5h／弱約 44h，適用 Ergobaby 背巾。👉 即 theo_select 那篇的同系列實品。</div>
+              <a class="lk" target="_blank" href="https://www.amazon.co.jp/-/zh/dp/B0GQ9WBYMW"><i data-lucide="external-link"></i>商品頁</a>
+            </div>
+          </label>
+          <label class="shop">
+            <input type="checkbox" data-id="s11">
+            <img class="thumb" data-gid="s11" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">3COINS 育兒好物（更多開箱）</div>
+              <div class="d">另一篇 3COINS 育兒小物實拍：手機支架、吸管杯、不漏水瓶、餵藥套組、遊戲墊、球池、馬桶輔助座圈、玩沙吊帶褲、家長折疊椅。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@80523730519/post/DY9QrpHkjbA"><i data-lucide="external-link"></i>貼文</a>
+              <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=3COINS%20%E5%8D%9A%E5%A4%9A%E9%A7%85"><i data-lucide="map-pin"></i>3COINS 博多</a>
+            </div>
+          </label>
+        </div>
+      </details>
+
+
+      <!-- 🗺️ 嬰幼兒採購地圖 -->
+      <details class="cat" open id="babymap">
+        <summary>🗺️ 嬰幼兒採購地圖 <span class="cnt">6 大採購點</span><span class="chev">▶</span></summary>
+        <div class="grid">
+          <label class="shop">
+            <input type="checkbox" data-id="s3">
+            <img class="thumb" data-gid="s3" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">福岡寶寶／幼兒用品攻略（nan.369369）</div>
+              <div class="d">部落客花 10 天逛福岡整理的完整攻略，以下依類型列出各採購點與地圖。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@nan.369369/post/DKmnu6lyJqk"><i data-lucide="external-link"></i>貼文</a>
+            </div>
+          </label>
+          <div class="place">
+            <div class="nm">🔸 阿卡將 Akachan Honpo <span class="rec">最推薦</span></div>
+            <div class="d">福岡最熟悉的母嬰連鎖，品項最齊全、比台灣多一些。亮點：有賣 mikihouse 童鞋與副牌 HOT BISCUITS（便宜很多，部分中國製）。福岡兩家分店都不在博多／天神／中洲。<br><b>強烈推薦 ららぽーと福岡店</b>（博多区那珂 6-23-1，10:00–21:00，距博多站約 5 分鐘車程）——整個商場還有眾多童裝品牌＋遊戲區，超親子友善，建議排半天到一天。⚠️ 位置偏遠。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%82%AB%E3%83%81%E3%83%A3%E3%83%B3%E3%83%9B%E3%83%B3%E3%83%9D%20%E3%82%89%E3%82%89%E3%81%BD%E3%83%BC%E3%81%A8%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i>阿卡將 ららぽーと福岡（推薦）</a><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%82%AB%E3%83%81%E3%83%A3%E3%83%B3%E3%83%9B%E3%83%B3%E3%83%9D%20%E7%A6%8F%E5%B2%A1%E3%83%9E%E3%83%AA%E3%83%8A%E3%82%BF%E3%82%A6%E3%83%B3"><i data-lucide="map-pin"></i>阿卡將 福岡マリナタウン店</a></div>
+          </div>
+          <div class="place">
+            <div class="nm">🔸 博多阪急 7F & AMU 博多 7F（相連）</div>
+            <div class="d">預算較高、想買特別／高級童裝就來這。兩館相連，且就在博多車站，最順路。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E9%98%AA%E6%80%A5%20%E5%8D%9A%E5%A4%9A%E9%A7%85"><i data-lucide="map-pin"></i>博多阪急</a></div>
+          </div>
+          <div class="place">
+            <div class="nm">🔸 岩田屋本館 6F（天神）</div>
+            <div class="d">天神地區唯一較完整的嬰兒用品樓層，國外平價品牌較多。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%A9%E7%94%B0%E5%B1%8B%E6%9C%AC%E9%A4%A8%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>岩田屋本館</a></div>
+          </div>
+          <div class="place">
+            <div class="nm">🔸 西松屋 <span class="rec">平價</span></div>
+            <div class="d">主打平價。介意「中國製」的家長可能不用特別跑一趟。福岡市區多家分店。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E6%9D%BE%E5%B1%8B%20%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i>西松屋 福岡</a></div>
+          </div>
+          <div class="place">
+            <div class="nm">🔸 尿布／奶粉／副食品</div>
+            <div class="d">一般超市幾乎都有；真的找不到就衝唐吉訶德（ドン・キホーテ，多為 24 小時）。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86%20%E4%B8%AD%E6%B4%B2"><i data-lucide="map-pin"></i>唐吉訶德 中洲</a><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%83%89%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%9B%E3%83%BC%E3%83%86%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>唐吉訶德 天神</a></div>
+          </div>
+          <div class="place">
+            <div class="nm">🔸 麵包超人玩具</div>
+            <div class="d">喜歡麵包超人（アンパンマン）玩具的話，去 BIC CAMERA 博多 2 館，超！多！</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%83%93%E3%83%83%E3%82%AF%E3%82%AB%E3%83%A1%E3%83%A9%20%E5%8D%9A%E5%A4%9A"><i data-lucide="map-pin"></i>BIC CAMERA 博多</a></div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 👟 鞋類 -->
+      <details class="cat" open id="shoes">
+        <summary>👟 鞋類 <span class="cnt">2 項</span><span class="chev">▶</span></summary>
+        <div class="grid">
+          <label class="shop">
+            <input type="checkbox" data-id="s6">
+            <img class="thumb" data-gid="s6" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">HOKA 跑鞋（Clifton 10 / Bondi 9 / Mach 7）</div>
+              <div class="d">於 Alpen TOKYO 運動用品店選購。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@liangyuanyuan5201990/post/DZL3hJ5Dzxd"><i data-lucide="external-link"></i>貼文</a>
+              <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%AB%E3%83%9A%E3%83%B3+%E5%8D%9A%E5%A4%9A"><i data-lucide="map-pin"></i>Alpen 博多</a>
+            </div>
+          </label>
+          <label class="shop">
+            <input type="checkbox" data-id="s7">
+            <img class="thumb" data-gid="s7" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">HOKA 跑鞋 · Alpen 免稅＋折價券</div>
+              <div class="d">Alpen 夏季運動鞋，免稅與優惠券可疊加。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@zhangxianxian165/post/DZL8iIbn_dt"><i data-lucide="external-link"></i>貼文</a>
+              <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%82%A2%E3%83%AB%E3%83%9A%E3%83%B3+%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i>Alpen 福岡</a>
+            </div>
+          </label>
+        </div>
+      </details>
+
+      <!-- 🍜 美食 -->
+      <details class="cat" open id="food">
+        <summary>🍜 美食・伴手禮（依食物類型） <span class="cnt">18 家</span><span class="chev">▶</span></summary>
+        <div class="sec-body" style="padding-top:6px">
+        <div style="font-size:13px;color:var(--sub);margin-bottom:4px">整理 thread 提到的店家：地址・Google Map・推薦餐點。來源：_jenny666_／e.ma.um／peishin_wu／axkswaa。</div>
+        <div class="ftype">🍳 早餐</div>
+        <div class="grid">
+          <div class="fplace">
+            <img class="thumb" data-gid="s12" alt="" loading="lazy">
+            <div class="pbody">
+            <div class="nm">食堂おわん <span class="src">peishin_wu</span></div>
+            <div class="addr">📍 福岡市博多区冷泉町 9-20 THE EDGE 1F</div>
+            <div class="addr">🕒 早餐 7:30–10:00（LO 9:30）</div>
+            <div class="dish">🍴 <b>推薦</b>：土鍋炊飯＋高湯玉子燒御膳 ¥1,500／明太子吃比較御膳 ¥2,000</div>
+            <div class="note2">這趟最愛早餐之一，<b>務必先訂位</b>，當天 walk-in 幾乎排不到。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%A3%9F%E5%A0%82%E3%81%8A%E3%82%8F%E3%82%93%20%E5%86%B7%E6%B3%89%E7%94%BA"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🥖 明太子法國麵包</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🥖</div>
+            <div class="pbody">
+            <div class="nm">THE FULL FULL HAKATA（フルフル博多） <span class="src">行程必吃</span></div>
+            <div class="addr">📍 福岡市博多区祇園町 9-3（櫛田神社前駅 步行 3 分）</div>
+            <div class="addr">🕒 10:00–19:00，週二休</div>
+            <div class="dish">🍴 <b>推薦</b>：名物 明太法國麵包（每天現烤 50＋ 次，可內用配咖啡）</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=THE%20FULL%20FULL%20HAKATA%20%E7%A5%87%E5%9C%92"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🍜 烏龍麵</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🍜</div>
+            <div class="pbody">
+            <div class="nm">明太子釜玉奶油烏龍麵 <span class="src">_jenny666_</span></div>
+            <div class="addr">📍 福岡市博多区博多駅中央街 8-1 JRJP博多ビル B1F</div>
+            <div class="dish">🍴 <b>推薦</b>：明太釜玉奶油烏龍（うどん居酒屋）</div>
+            <div class="note2">部落客大雨仍排隊狂推。⚠️原文未寫店名，<b>代表名店參考：二〇加屋長介 JRJP博多ビル店</b>。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E3%80%87%E5%8A%A0%E5%B1%8B%E9%95%B7%E4%BB%8B%20JRJP%E5%8D%9A%E5%A4%9A%E3%83%93%E3%83%AB"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🍱 鰻魚飯</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🍱</div>
+            <div class="pbody">
+            <div class="nm">百年老店鰻魚飯 <span class="src">_jenny666_</span></div>
+            <div class="addr">📍 福岡市博多区中洲 2-8-27</div>
+            <div class="addr">🕒 11:00–21:00（LO 20:30），週三休</div>
+            <div class="dish">🍴 <b>推薦</b>：鰻魚蒲燒（獨門「こなし」燒法，外酥內嫩）</div>
+            <div class="note2">⚠️原文未寫店名，<b>福岡百年鰻魚代表：博多名代 吉塚うなぎ屋（創業 1873）</b>。部落客個人評價「還好」，覺得名古屋／大阪更佳，可自行斟酌。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E5%90%8D%E4%BB%A3%20%E5%90%89%E5%A1%9A%E3%81%86%E3%81%AA%E3%81%8E%E5%B1%8B"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🐟 海鮮・定食</div>
+        <div class="grid">
+          <div class="fplace">
+            <img class="thumb" data-gid="s13" alt="" loading="lazy">
+            <div class="pbody">
+            <div class="nm">博多炉端 魚男 FISHMAN <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 福岡市中央区今泉 1-4-23（天神／藥院）</div>
+            <div class="addr">🕒 11:30–14:30 / 17:30–24:00</div>
+            <div class="dish">🍴 <b>推薦</b>：午餐定食（約排 15 分）、生魚片／烤魚／炸物定食；布丁也推</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E7%82%89%E7%AB%AF%20%E9%AD%9A%E7%94%B7%20%E4%BB%8A%E6%B3%89"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🥩 和牛・燒肉</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🥩</div>
+            <div class="pbody">
+            <div class="nm">黒毛和牛 博多牛まぶし 武蔵（天神店） <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 西鉄福岡（天神）駅 步行 1 分（博多駅東店：博多区博多駅東 1-12-3 サンライフホテル 1F）</div>
+            <div class="dish">🍴 <b>推薦</b>：和牛まぶし＋自製茶泡飯（免費加飯），便宜好吃</div>
+            <div class="note2">11:10 開店前就要排隊（已 3、40 人）；<b>建議提前預約</b>。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E7%89%9B%E3%81%BE%E3%81%B6%E3%81%97%20%E6%AD%A6%E8%94%B5%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+          <div class="fplace">
+            <div class="thumb ph">🥩</div>
+            <div class="pbody">
+            <div class="nm">肉屋 肉一 博多店 <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 福岡市博多区博多駅南 1-2-18 エムビル 1F（筑紫口 步行 5 分）</div>
+            <div class="addr">🕒 16:00–24:00，可網路訂位</div>
+            <div class="dish">🍴 <b>推薦</b>：綜合黑毛和牛拼盤（佐賀／宮崎／鹿兒島 A5）</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E8%82%89%E5%B1%8B%20%E8%82%89%E4%B8%80%20%E5%8D%9A%E5%A4%9A%E5%BA%97"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🍢 串燒</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🍢</div>
+            <div class="pbody">
+            <div class="nm">博多うずまき 博多駅前店 <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 福岡市博多区博多駅前 3-10-2 ウーブル博多 1F</div>
+            <div class="addr">🕒 平日 16:00–翌 1:00／六日例假 13:00–</div>
+            <div class="dish">🍴 <b>推薦</b>：炭火野菜捲串（包紫蘇葉、高麗菜）、炉端燒</div>
+            <div class="note2">找了第五間串燒才有位，這家蔬菜捲是特色。</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E3%81%86%E3%81%9A%E3%81%BE%E3%81%8D%20%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D%E5%BA%97"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🍞 麵包</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🍞</div>
+            <div class="pbody">
+            <div class="nm">DACOMECCA（ダコメッカ） <span class="src">_jenny666_・e.ma.um</span></div>
+            <div class="addr">📍 福岡市博多区博多駅前 4-14-1 1F</div>
+            <div class="addr">🕒 8:00–20:00（<b>建議 9 點後</b>品項較齊）</div>
+            <div class="dish">🍴 <b>推薦</b>：鹹甜麵包都優秀（アマムダコタン 姊妹店）；內用座位少</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=DACOMECCA%20%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">🍮 甜點・冰品</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🍓</div>
+            <div class="pbody">
+              <div class="nm">鈴懸 本店（すずかけ） <span class="src">在地推薦</span></div>
+              <div class="addr">📍 福岡市博多区上川端町 12-20 ふくぎん博多ビル 1F</div>
+              <div class="addr">🕒 菓舗 9:00–19:00／茶舗（內用）11:00–19:00</div>
+              <div class="dish">🍴 <b>推薦</b>：草莓大福（必吃）、抹茶聖代（すずのパフェ ¥1,080，內用限定，驚艷好吃）</div>
+              <div class="note2">⭐ 唯一由日本在地客戶推薦！百年和菓子老店（創業 1923）。岩田屋、大丸也有外賣櫃，但<b>內用才是精髓</b>。</div>
+              <div class="maps">
+                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E6%9C%AC%E5%BA%97%20%E4%B8%8A%E5%B7%9D%E7%AB%AF%E7%94%BA"><i data-lucide="map-pin"></i>本店</a>
+                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E5%B2%A9%E7%94%B0%E5%B1%8B%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i>岩田屋外賣櫃</a>
+                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E5%A4%A7%E4%B8%B8%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E%E5%BA%97"><i data-lucide="map-pin"></i>大丸外賣櫃</a>
+              </div>
+            </div>
+          </div>
+          <div class="fplace">
+            <div class="thumb ph">🍮</div>
+            <div class="pbody">
+            <div class="nm">治一郎 JR博多シティ店 <span class="src">_jenny666_</span></div>
+            <div class="addr">📍 福岡市博多区博多駅中央街 1-1 博多デイトス いっぴん通り 1F</div>
+            <div class="addr">🕒 10:00–21:00</div>
+            <div class="dish">🍴 <b>推薦</b>：布丁、年輪蛋糕（店員給超大塊試吃）</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%BB%E4%B8%80%E9%83%8E%20JR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+          <div class="fplace">
+            <div class="thumb ph">🍦</div>
+            <div class="pbody">
+            <div class="nm">いもんね 博多店（Imonne） <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 福岡市博多区博多駅中央街 9-1 博多マルイ 1F</div>
+            <div class="addr">🕒 10:00–21:00</div>
+            <div class="dish">🍴 <b>推薦</b>：ジェラ餅（Q 麻糬＋香醇巧克力冰淇淋）、濃郁抹茶拿鐵</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%81%84%E3%82%82%E3%82%93%E3%81%AD%20%E5%8D%9A%E5%A4%9A%E3%83%9E%E3%83%AB%E3%82%A4"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+          <div class="fplace">
+            <div class="thumb ph">🍰</div>
+            <div class="pbody">
+            <div class="nm">HOC（hoc_cheesecake） <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 福岡市中央区天神 5-10-1 1F</div>
+            <div class="addr">🕒 10:00–18:00</div>
+            <div class="dish">🍴 <b>推薦</b>：無麩質起司蛋糕、甜點盤（5 月有草莓）</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=HOC%20%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+          <div class="fplace">
+            <div class="thumb ph">🍵</div>
+            <div class="pbody">
+            <div class="nm">焙茶冰淇淋大福 <span class="src">_jenny666_</span></div>
+            <div class="dish">🍴 <b>推薦</b>：燒過的冰淇淋大福，焙茶口味特別推</div>
+            <div class="note2">原文未提及店名。</div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">☕ 咖啡・茶・飲料</div>
+        <div class="grid">
+          <div class="fplace">
+            <div class="thumb ph">🍵</div>
+            <div class="pbody">
+            <div class="nm">&amp;LOCALS 大濠公園 <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 福岡市中央区大濠公園 1-9 大濠テラス 1F</div>
+            <div class="addr">🕒 9:00–18:30，週一休</div>
+            <div class="dish">🍴 <b>推薦</b>：八女茶特調、草莓紅茶氣泡飲</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%26LOCALS%20%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+          <div class="fplace">
+            <div class="thumb ph">☕</div>
+            <div class="pbody">
+            <div class="nm">Blue Bottle Coffee 福岡天神 Cafe <span class="src">e.ma.um</span></div>
+            <div class="addr">📍 福岡市中央区天神 2-2-20 警固神社社務所ビル 1F</div>
+            <div class="addr">🕒 8:00–20:00</div>
+            <div class="dish">🍴 <b>推薦</b>：咖啡（部落客覺得普通，可順路）</div>
+            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Blue%20Bottle%20Coffee%20%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>Google Map</a></div>
+            </div>
+          </div>
+          <div class="fplace">
+            <img class="thumb" data-gid="s9" alt="" loading="lazy">
+            <div class="pbody">
+            <div class="nm">九州限定飲料 <span class="src">axkswaa</span></div>
+            <div class="dish">🍴 <b>推薦</b>：超市／便利商店的九州在地限定飲品，超好喝</div>
+            <div class="note2">隨手補貨打卡用。</div>
+            </div>
+          </div>
+        </div>
+        <div class="ftype">📷 一日美食打卡相簿</div>
+        <div class="grid">
+          <label class="shop">
+            <input type="checkbox" data-id="s10">
+            <img class="thumb" data-gid="s10" alt="" loading="lazy">
+            <div class="body">
+              <div class="t">_jenny666_ 福岡 Day3 一日美食巡禮（17 張）</div>
+              <div class="d">明太釜玉奶油烏龍、百年鰻魚飯、焙茶冰淇淋大福、治一郎布丁＋年輪蛋糕、Dacomecca 麵包、7-11 熱狗、星巴克。點圖看整篇相簿。</div>
+              <a class="lk" target="_blank" href="https://www.threads.com/@_jenny666_/post/DZKkUSfFNKz"><i data-lucide="external-link"></i>貼文</a>
+            </div>
+          </label>
+        </div>
+        </div>
+      </details>
+
+      <button class="reset" id="reset">↺ 清除全部勾選</button>
+    </div>
+  </details>
+
+  <!-- 📝 行程備註 -->
+  <details class="sec" open id="note">
+    <summary><span class="ic">📝</span>行程備註<span class="chev">▶</span></summary>
+    <div class="sec-body">
+      <div class="note">
+        🚫 <b>由布院之森 / 柳川：確定不去</b>。由布院之森列車車程約 2.5 小時且晃得厲害，怕暈車＋肚子不舒服；柳川划船也一併取消，這趟專心在博多市區採購＋吃。
+      </div>
+    </div>
+  </details>
+
+  <!-- 📚 參考連結 -->
+  <details class="sec" open id="ref">
+    <summary><span class="ic">📚</span>參考連結<span class="chev">▶</span></summary>
+    <div class="sec-body">
+      <div class="reflist">
+        <label class="shop" style="margin-bottom:10px">
+          <img class="thumb" data-gid="s14" alt="" loading="lazy">
+          <div class="body">
+            <div class="t">📷 福岡小碎片 · 景點散策（6 張）</div>
+            <div class="d">福岡在地景點／體驗隨拍，點圖看相簿。</div>
+            <a class="lk" target="_blank" href="https://www.threads.com/@07.24_y/post/DZGrMXdE9Ag"><i data-lucide="external-link"></i>貼文</a>
+          </div>
+        </label>
+        <a target="_blank" href="https://natasha-traveler.tw/tag/fukuoka/">
+          <div class="t">Natasha 旅遊筆記 · 福岡攻略</div>
+          <div class="d">福岡相關文章彙整。</div>
+          <div class="u">natasha-traveler.tw/tag/fukuoka</div>
+        </a>
+      </div>
+    </div>
+  </details>
+
+  <footer>
+    整理自 LINE 群組「日本沒裝滿不回家」對話紀錄（2026/06/02 – 06/06）<br>
+    勾選進度儲存在本機瀏覽器 · 祝採購順利 💕
+  </footer>
+</div>
+
+<button id="gotop" title="回到頂部" aria-label="回到頂部">↑</button>
+
+<script>
+  // checklist persistence
+  const KEY="fukuoka_shop_2026";
+  const saved=JSON.parse(localStorage.getItem(KEY)||"{}");
+  document.querySelectorAll(".shop input").forEach(cb=>{
+    const id=cb.dataset.id;
+    if(saved[id]){cb.checked=true;cb.closest(".shop").classList.add("done");}
+    cb.addEventListener("change",()=>{
+      cb.closest(".shop").classList.toggle("done",cb.checked);
+      saved[id]=cb.checked;
+      localStorage.setItem(KEY,JSON.stringify(saved));
+    });
+  });
+  document.getElementById("reset").addEventListener("click",e=>{
+    e.preventDefault();
+    localStorage.removeItem(KEY);
+    document.querySelectorAll(".shop input").forEach(cb=>{
+      cb.checked=false;cb.closest(".shop").classList.remove("done");
+    });
+  });
+
+  // go to top
+  const gotop=document.getElementById("gotop");
+  addEventListener("scroll",()=>{gotop.classList.toggle("show",scrollY>400)});
+  gotop.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));
+
+  // tapping a nav chip should also expand its target section if collapsed
+  document.querySelectorAll(".nav a").forEach(a=>{
+    a.addEventListener("click",()=>{
+      const t=document.querySelector(a.getAttribute("href"));
+      if(t&&t.tagName==="DETAILS"){t.open=true;}
+      // if target is a category inside the shop section, open both
+      if(t){const sec=t.closest&&t.closest("details.sec");if(sec)sec.open=true;if(t.tagName==="DETAILS")t.open=true;}
+    });
+  });
+</script>
+
+<div id="lb" role="dialog" aria-modal="true">
+  <div class="top"><span class="cap"></span><span class="count"></span></div>
+  <button class="close" aria-label="關閉">×</button>
+  <div class="stage">
+    <button class="nav-btn prev" aria-label="上一張">‹</button>
+    <img alt="">
+    <button class="nav-btn next" aria-label="下一張">›</button>
+  </div>
+  <div class="dots"></div>
+</div>
+
+<script>
+  const IMGS={"s1":["s1-1.jpg","s1-2.jpg","s1-3.jpg","s1-4.jpg","s1-5.jpg","s1-6.jpg","s1-7.jpg","s1-8.jpg","s1-9.jpg","s1-10.jpg","s1-11.jpg","s1-12.jpg","s1-13.jpg","s1-14.jpg","s1-15.jpg","s1-16.jpg","s1-17.jpg","s1-18.jpg","s1-19.jpg","s1-20.jpg"],"s10":["s10-1.jpg","s10-2.jpg","s10-3.jpg","s10-4.jpg","s10-5.jpg","s10-6.jpg","s10-7.jpg","s10-8.jpg","s10-9.jpg","s10-10.jpg","s10-11.jpg","s10-12.jpg","s10-13.jpg","s10-14.jpg","s10-15.jpg","s10-16.jpg","s10-17.jpg"],"s11":["s11-1.jpg","s11-2.jpg","s11-3.jpg","s11-4.jpg","s11-5.jpg","s11-6.jpg","s11-7.jpg","s11-8.jpg","s11-9.jpg","s11-10.jpg"],"s12":["s12-1.jpg","s12-2.jpg","s12-3.jpg","s12-4.jpg","s12-5.jpg","s12-6.jpg","s12-7.jpg"],"s13":["s13-1.jpg"],"s14":["s14-1.jpg","s14-2.jpg","s14-3.jpg","s14-4.jpg","s14-5.jpg","s14-6.jpg"],"s2":["s2-1.jpg","s2-2.jpg","s2-3.jpg","s2-4.jpg","s2-5.jpg","s2-6.jpg","s2-7.jpg","s2-8.jpg","s2-9.jpg"],"s3":["s3-1.jpg","s3-2.jpg"],"s4":["s4-1.jpg"],"s5":["s5-1.jpg","s5-2.jpg","s5-3.jpg","s5-4.jpg","s5-5.jpg","s5-6.jpg","s5-7.jpg","s5-8.jpg"],"s6":["s6-1.webp","s6-2.webp","s6-3.webp","s6-4.webp","s6-5.webp","s6-6.webp","s6-7.jpg"],"s7":["s7-1.webp","s7-2.jpg","s7-3.webp","s7-4.webp","s7-5.webp","s7-6.webp","s7-7.webp"],"s9":["s9-1.jpg","s9-2.jpg"]};
+  // set thumbnails + multi-image badge, make clickable
+  document.querySelectorAll('.thumb[data-gid]').forEach(img=>{
+    const gid=img.dataset.gid, list=IMGS[gid]||[];
+    if(!list.length)return;
+    img.src='images/'+list[0];
+    const wrap=document.createElement('span');wrap.className='thumbwrap';
+    img.parentNode.insertBefore(wrap,img);wrap.appendChild(img);
+    if(list.length>1){const b=document.createElement('span');b.className='badge';
+      b.innerHTML='🖼 '+list.length;wrap.appendChild(b);}
+    wrap.addEventListener('click',e=>{e.preventDefault();
+      const host=img.closest('.shop, .fplace');const title=host?.querySelector('.t, .nm')?.textContent||'';
+      openLB(gid,0,title);});
+  });
+
+  const lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),
+    cap=lb.querySelector('.cap'),count=lb.querySelector('.count'),dots=lb.querySelector('.dots'),
+    prev=lb.querySelector('.prev'),next=lb.querySelector('.next');
+  let cur=[],idx=0;
+  function render(){
+    lbImg.src='images/'+cur[idx];
+    count.textContent=(idx+1)+' / '+cur.length;
+    prev.disabled=idx===0; next.disabled=idx===cur.length-1;
+    [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===idx));
+  }
+  function openLB(gid,start,title){
+    cur=IMGS[gid]||[];if(!cur.length)return;idx=start||0;
+    cap.textContent=title||'';
+    dots.innerHTML='';
+    if(cur.length>1)cur.forEach((_,i)=>{const d=document.createElement('i');
+      d.addEventListener('click',()=>{idx=i;render();});dots.appendChild(d);});
+    render();lb.classList.add('show');document.body.style.overflow='hidden';
+  }
+  function closeLB(){lb.classList.remove('show');document.body.style.overflow='';}
+  function go(d){idx=Math.min(cur.length-1,Math.max(0,idx+d));render();}
+  prev.addEventListener('click',e=>{e.stopPropagation();go(-1);});
+  next.addEventListener('click',e=>{e.stopPropagation();go(1);});
+  lb.querySelector('.close').addEventListener('click',closeLB);
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('stage'))closeLB();});
+  addEventListener('keydown',e=>{if(!lb.classList.contains('show'))return;
+    if(e.key==='Escape')closeLB();else if(e.key==='ArrowLeft')go(-1);else if(e.key==='ArrowRight')go(1);});
+</script>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>if(window.lucide)lucide.createIcons();</script>
+</body>
+</html>
