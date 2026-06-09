@@ -198,6 +198,13 @@
   /* 手機：停用雙擊縮放（避免切換圖片時畫面被放大），保留雙指縮放 */
   #lb,#lb .stage,#lb img,#lb .nav-btn,#lb .close,#lb .dots i,
   .thumbwrap,.lk,.map,.nav a,#gotop{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+
+  .fplace a.addr.maplink{display:block;text-decoration:none}
+  .fplace a.addr.maplink:hover{color:var(--good);text-decoration:underline}
+  .fplace a.addr.maplink svg{color:var(--good)}
+  .kvaddr{color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+  .kvaddr:hover{color:var(--good);text-decoration:underline}
+  .kvaddr svg{width:14px;height:14px;color:var(--good);flex-shrink:0}
 </style>
 </head>
 <body id="top">
@@ -261,7 +268,7 @@
     <div class="sec-body">
       <div class="card">
         <h3>Hotel Forza Hakata-eki Chikushi-Guchi　<span style="font-weight:400;font-size:13px;color:var(--sub)">6/10 – 6/14</span></h3>
-        <div class="kv"><b>地址</b><span>〒812-0012 福岡県福岡市博多区博多駅中央街 4-16</span><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Forza+%E5%8D%9A%E5%A4%9A%E9%A7%85%E7%AD%91%E7%B4%AB%E5%8F%A3"><i data-lucide="map-pin"></i>地圖</a></div>
+        <div class="kv"><b>地址</b><a class="kvaddr" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Forza+%E5%8D%9A%E5%A4%9A%E9%A7%85%E7%AD%91%E7%B4%AB%E5%8F%A3"><i data-lucide="map-pin"></i> 〒812-0012 福岡県福岡市博多区博多駅中央街 4-16</a></div>
         <div class="kv"><b>入住</b><span>14:00　｜　退房 11:00</span></div>
         <div class="meta" style="margin-top:8px">
           <i data-lucide="map-pin"></i> 博多車站筑紫口出站左轉步行 1 分鐘，鄰近地下美食街與伴手禮區<br>
@@ -438,22 +445,20 @@
             <img class="thumb" data-gid="s12" alt="" loading="lazy">
             <div class="pbody">
             <div class="nm">食堂おわん <span class="src">peishin_wu</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区冷泉町 9-20 THE EDGE 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%A3%9F%E5%A0%82%E3%81%8A%E3%82%8F%E3%82%93%20%E5%86%B7%E6%B3%89%E7%94%BA"><i data-lucide="map-pin"></i> 福岡市博多区冷泉町 9-20 THE EDGE 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 早餐 7:30–10:00（LO 9:30）</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：土鍋炊飯＋高湯玉子燒御膳 ¥1,500／明太子吃比較御膳 ¥2,000</div>
             <div class="note2">這趟最愛早餐之一，<b>務必先訂位</b>，當天 walk-in 幾乎排不到。</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%A3%9F%E5%A0%82%E3%81%8A%E3%82%8F%E3%82%93%20%E5%86%B7%E6%B3%89%E7%94%BA"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
             <img class="thumb" data-gid="s17" alt="" loading="lazy">
             <div class="pbody">
               <div class="nm">bills 福岡（水上公園店） <span class="src">fuk_styles</span></div>
-              <div class="addr"><i data-lucide="map-pin"></i> 福岡市中央区西中洲 13-1 SHIP'S GARDEN 1F（那珂川畔船型建築）</div>
+              <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=bills%20%E6%B0%B4%E4%B8%8A%E5%85%AC%E5%9C%92%20%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i> 福岡市中央区西中洲 13-1 SHIP'S GARDEN 1F（那珂川畔船型建築）</a>
               <div class="addr"><i data-lucide="clock"></i> 平日 8:30–／六日例假 8:00–</div>
               <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：被譽為「世界第一好吃早餐」的招牌鬆餅</div>
               <div class="note2"><i data-lucide="triangle-alert"></i> 據貼文 <b>6/15 永久閉店</b>，這趟（6/10–14）是最後機會！</div>
-              <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=bills%20%E6%B0%B4%E4%B8%8A%E5%85%AC%E5%9C%92%20%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -463,10 +468,9 @@
             <div class="thumb ph"><i data-lucide="croissant"></i></div>
             <div class="pbody">
             <div class="nm">THE FULL FULL HAKATA（フルフル博多） <span class="src">行程必吃</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区祇園町 9-3（櫛田神社前駅 步行 3 分）</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=THE%20FULL%20FULL%20HAKATA%20%E7%A5%87%E5%9C%92"><i data-lucide="map-pin"></i> 福岡市博多区祇園町 9-3（櫛田神社前駅 步行 3 分）</a>
             <div class="addr"><i data-lucide="clock"></i> 10:00–19:00，週二休</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：名物 明太法國麵包（每天現烤 50＋ 次，可內用配咖啡）</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=THE%20FULL%20FULL%20HAKATA%20%E7%A5%87%E5%9C%92"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -476,10 +480,9 @@
             <div class="thumb ph"><i data-lucide="soup"></i></div>
             <div class="pbody">
             <div class="nm">明太子釜玉奶油烏龍麵 <span class="src">_jenny666_</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区博多駅中央街 8-1 JRJP博多ビル B1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E3%80%87%E5%8A%A0%E5%B1%8B%E9%95%B7%E4%BB%8B%20JRJP%E5%8D%9A%E5%A4%9A%E3%83%93%E3%83%AB"><i data-lucide="map-pin"></i> 福岡市博多区博多駅中央街 8-1 JRJP博多ビル B1F</a>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：明太釜玉奶油烏龍（うどん居酒屋）</div>
             <div class="note2">部落客大雨仍排隊狂推。⚠️原文未寫店名，<b>代表名店參考：二〇加屋長介 JRJP博多ビル店</b>。</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E3%80%87%E5%8A%A0%E5%B1%8B%E9%95%B7%E4%BB%8B%20JRJP%E5%8D%9A%E5%A4%9A%E3%83%93%E3%83%AB"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -489,13 +492,10 @@
             <div class="thumb ph"><i data-lucide="soup"></i></div>
             <div class="pbody">
               <div class="nm">麺や兼虎（兼虎） <span class="src">在地人氣</span></div>
-              <div class="addr"><i data-lucide="map-pin"></i> 天神本店：福岡市中央区渡辺通 4-9-18 福酒ビル 1F</div>
+              <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%BA%BA%E3%82%84%E5%85%BC%E8%99%8E%20%E5%A4%A9%E7%A5%9E%E6%9C%AC%E5%BA%97"><i data-lucide="map-pin"></i> 天神本店：福岡市中央区渡辺通 4-9-18 福酒ビル 1F</a>
               <div class="addr"><i data-lucide="clock"></i> 11:00–23:00（行列名店；博多站亦有分店）</div>
               <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：濃郁系沾麵，麵非常 Q 彈（吃到後面會有一點膩）</div>
-              <div class="maps">
-                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%BA%BA%E3%82%84%E5%85%BC%E8%99%8E%20%E5%A4%A9%E7%A5%9E%E6%9C%AC%E5%BA%97"><i data-lucide="map-pin"></i>天神本店</a>
-                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%BA%BA%E3%82%84%E5%85%BC%E8%99%8E%20%E3%82%A2%E3%83%9F%E3%83%A5%E3%83%97%E3%83%A9%E3%82%B6%E5%8D%9A%E5%A4%9A"><i data-lucide="map-pin"></i>博多站店</a>
-              </div>
+              <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%BA%BA%E3%82%84%E5%85%BC%E8%99%8E%20%E3%82%A2%E3%83%9F%E3%83%A5%E3%83%97%E3%83%A9%E3%82%B6%E5%8D%9A%E5%A4%9A"><i data-lucide="map-pin"></i>博多站店</a></div>
             </div>
           </div>
         </div>
@@ -505,11 +505,10 @@
             <div class="thumb ph"><i data-lucide="utensils"></i></div>
             <div class="pbody">
             <div class="nm">百年老店鰻魚飯 <span class="src">_jenny666_</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区中洲 2-8-27</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E5%90%8D%E4%BB%A3%20%E5%90%89%E5%A1%9A%E3%81%86%E3%81%AA%E3%81%8E%E5%B1%8B"><i data-lucide="map-pin"></i> 福岡市博多区中洲 2-8-27</a>
             <div class="addr"><i data-lucide="clock"></i> 11:00–21:00（LO 20:30），週三休</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：鰻魚蒲燒（獨門「こなし」燒法，外酥內嫩）</div>
             <div class="note2">⚠️原文未寫店名，<b>福岡百年鰻魚代表：博多名代 吉塚うなぎ屋（創業 1873）</b>。部落客個人評價「還好」，覺得名古屋／大阪更佳，可自行斟酌。</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E5%90%8D%E4%BB%A3%20%E5%90%89%E5%A1%9A%E3%81%86%E3%81%AA%E3%81%8E%E5%B1%8B"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -519,10 +518,9 @@
             <img class="thumb" data-gid="s13" alt="" loading="lazy">
             <div class="pbody">
             <div class="nm">博多炉端 魚男 FISHMAN <span class="src">e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市中央区今泉 1-4-23（天神／藥院）</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E7%82%89%E7%AB%AF%20%E9%AD%9A%E7%94%B7%20%E4%BB%8A%E6%B3%89"><i data-lucide="map-pin"></i> 福岡市中央区今泉 1-4-23（天神／藥院）</a>
             <div class="addr"><i data-lucide="clock"></i> 11:30–14:30 / 17:30–24:00</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：午餐定食（約排 15 分）、生魚片／烤魚／炸物定食；布丁也推</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E7%82%89%E7%AB%AF%20%E9%AD%9A%E7%94%B7%20%E4%BB%8A%E6%B3%89"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -532,21 +530,19 @@
             <div class="thumb ph"><i data-lucide="beef"></i></div>
             <div class="pbody">
             <div class="nm">黒毛和牛 博多牛まぶし 武蔵（天神店） <span class="src">e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 西鉄福岡（天神）駅 步行 1 分（博多駅東店：博多区博多駅東 1-12-3 サンライフホテル 1F）</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E7%89%9B%E3%81%BE%E3%81%B6%E3%81%97%20%E6%AD%A6%E8%94%B5%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i> 西鉄福岡（天神）駅 步行 1 分（博多駅東店：博多区博多駅東 1-12-3 サンライフホテル 1F）</a>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：和牛まぶし＋自製茶泡飯（免費加飯），便宜好吃</div>
             <div class="note2">11:10 開店前就要排隊（已 3、40 人）；<b>建議提前預約</b>。</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E7%89%9B%E3%81%BE%E3%81%B6%E3%81%97%20%E6%AD%A6%E8%94%B5%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
             <img class="thumb" data-gid="s32" alt="" loading="lazy">
             <div class="pbody">
             <div class="nm">肉屋 肉一 博多店 <span class="src">e.ma.um・cool1314happy</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区博多駅南 1-2-18 エムビル 1F（筑紫口 步行 5 分）</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E8%82%89%E5%B1%8B%20%E8%82%89%E4%B8%80%20%E5%8D%9A%E5%A4%9A%E5%BA%97"><i data-lucide="map-pin"></i> 福岡市博多区博多駅南 1-2-18 エムビル 1F（筑紫口 步行 5 分）</a>
             <div class="addr"><i data-lucide="clock"></i> 16:00–24:00，可網路訂位</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：<b>厚切牛舌</b>（必點）、綜合黑毛和牛拼盤（A5，附今日特選介紹）、拼盤小菜解膩</div>
             <div class="note2"><i data-lucide="triangle-alert"></i> <b>30 天前</b>開放預訂，記得準時訂！</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E8%82%89%E5%B1%8B%20%E8%82%89%E4%B8%80%20%E5%8D%9A%E5%A4%9A%E5%BA%97"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -556,11 +552,10 @@
             <div class="thumb ph"><i data-lucide="flame"></i></div>
             <div class="pbody">
             <div class="nm">博多うずまき 博多駅前店 <span class="src">e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区博多駅前 3-10-2 ウーブル博多 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E3%81%86%E3%81%9A%E3%81%BE%E3%81%8D%20%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D%E5%BA%97"><i data-lucide="map-pin"></i> 福岡市博多区博多駅前 3-10-2 ウーブル博多 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 平日 16:00–翌 1:00／六日例假 13:00–</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：炭火野菜捲串（包紫蘇葉、高麗菜）、炉端燒</div>
             <div class="note2">找了第五間串燒才有位，這家蔬菜捲是特色。</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E3%81%86%E3%81%9A%E3%81%BE%E3%81%8D%20%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D%E5%BA%97"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -570,10 +565,9 @@
             <div class="thumb ph"><i data-lucide="sandwich"></i></div>
             <div class="pbody">
             <div class="nm">DACOMECCA（ダコメッカ） <span class="src">_jenny666_・e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区博多駅前 4-14-1 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=DACOMECCA%20%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D"><i data-lucide="map-pin"></i> 福岡市博多区博多駅前 4-14-1 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 8:00–20:00（<b>建議 9 點後</b>品項較齊）</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：鹹甜麵包都優秀（アマムダコタン 姊妹店）；內用座位少</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=DACOMECCA%20%E5%8D%9A%E5%A4%9A%E9%A7%85%E5%89%8D"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -583,59 +577,49 @@
             <div class="thumb ph"><i data-lucide="cake-slice"></i></div>
             <div class="pbody">
               <div class="nm">筥崎 鳩太郎商店 <span class="src">茶屋・甜點</span></div>
-              <div class="addr"><i data-lucide="map-pin"></i> 福岡市東区箱崎 1-44-20（筥崎宮步行 1 分，繡球花季可順遊）</div>
+              <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E7%AD%A5%E5%B4%8E%20%E9%B3%A9%E5%A4%AA%E9%83%8E%E5%95%86%E5%BA%97%20%E7%AE%B1%E5%B4%8E"><i data-lucide="map-pin"></i> 福岡市東区箱崎 1-44-20（筥崎宮步行 1 分，繡球花季可順遊）</a>
               <div class="addr"><i data-lucide="clock"></i> 茶房 11:30–17:00，週一休</div>
               <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：抹茶提拉米蘇 ¥710／七輪炭烤糰子組合 ¥1,210（飲料套餐：甜點 +¥390）／梭子蟹沾麵 ¥1,190（11:30–14:00 限定）</div>
               <div class="note2"><i data-lucide="train-front"></i> 交通：地鐵「箱崎宮前」站步行約 3 分鐘。</div>
-              <div class="maps">
-                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E7%AD%A5%E5%B4%8E%20%E9%B3%A9%E5%A4%AA%E9%83%8E%E5%95%86%E5%BA%97%20%E7%AE%B1%E5%B4%8E"><i data-lucide="map-pin"></i>鳩太郎商店</a>
-                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E7%AD%A5%E5%B4%8E%E5%AE%AE"><i data-lucide="map-pin"></i>筥崎宮</a>
-              </div>
+              <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E7%AD%A5%E5%B4%8E%E5%AE%AE"><i data-lucide="map-pin"></i>筥崎宮</a></div>
             </div>
           </div>
           <div class="fplace">
             <div class="thumb ph"><i data-lucide="cherry"></i></div>
             <div class="pbody">
               <div class="nm">鈴懸 本店（すずかけ） <span class="src">在地推薦</span></div>
-              <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区上川端町 12-20 ふくぎん博多ビル 1F</div>
+              <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E6%9C%AC%E5%BA%97%20%E4%B8%8A%E5%B7%9D%E7%AB%AF%E7%94%BA"><i data-lucide="map-pin"></i> 福岡市博多区上川端町 12-20 ふくぎん博多ビル 1F</a>
               <div class="addr"><i data-lucide="clock"></i> 菓舗 9:00–19:00／茶舗（內用）11:00–19:00</div>
               <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：草莓大福（必吃）、抹茶聖代（すずのパフェ ¥1,080，內用限定，驚艷好吃）</div>
               <div class="note2"><i data-lucide="star"></i> 唯一由日本在地客戶推薦！百年和菓子老店（創業 1923）。岩田屋、大丸也有外賣櫃，但<b>內用才是精髓</b>。</div>
-              <div class="maps">
-                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E6%9C%AC%E5%BA%97%20%E4%B8%8A%E5%B7%9D%E7%AB%AF%E7%94%BA"><i data-lucide="map-pin"></i>本店</a>
-                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E5%B2%A9%E7%94%B0%E5%B1%8B%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i>岩田屋外賣櫃</a>
-                <a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E5%A4%A7%E4%B8%B8%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E%E5%BA%97"><i data-lucide="map-pin"></i>大丸外賣櫃</a>
-              </div>
+              <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E5%B2%A9%E7%94%B0%E5%B1%8B%E6%9C%AC%E5%BA%97%20%E7%A6%8F%E5%B2%A1"><i data-lucide="map-pin"></i>岩田屋外賣櫃</a><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E9%88%B4%E6%87%B8%20%E5%A4%A7%E4%B8%B8%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E%E5%BA%97"><i data-lucide="map-pin"></i>大丸外賣櫃</a></div>
             </div>
           </div>
           <div class="fplace">
             <div class="thumb ph"><i data-lucide="cake-slice"></i></div>
             <div class="pbody">
             <div class="nm">治一郎 JR博多シティ店 <span class="src">_jenny666_</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区博多駅中央街 1-1 博多デイトス いっぴん通り 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%BB%E4%B8%80%E9%83%8E%20JR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3"><i data-lucide="map-pin"></i> 福岡市博多区博多駅中央街 1-1 博多デイトス いっぴん通り 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 10:00–21:00</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：布丁、年輪蛋糕（店員給超大塊試吃）</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E6%B2%BB%E4%B8%80%E9%83%8E%20JR%E5%8D%9A%E5%A4%9A%E3%82%B7%E3%83%86%E3%82%A3"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
             <div class="thumb ph"><i data-lucide="ice-cream-cone"></i></div>
             <div class="pbody">
             <div class="nm">いもんね 博多店（Imonne） <span class="src">e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市博多区博多駅中央街 9-1 博多マルイ 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%81%84%E3%82%82%E3%82%93%E3%81%AD%20%E5%8D%9A%E5%A4%9A%E3%83%9E%E3%83%AB%E3%82%A4"><i data-lucide="map-pin"></i> 福岡市博多区博多駅中央街 9-1 博多マルイ 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 10:00–21:00</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：ジェラ餅（Q 麻糬＋香醇巧克力冰淇淋）、濃郁抹茶拿鐵</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%81%84%E3%82%82%E3%82%93%E3%81%AD%20%E5%8D%9A%E5%A4%9A%E3%83%9E%E3%83%AB%E3%82%A4"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
             <div class="thumb ph"><i data-lucide="cake-slice"></i></div>
             <div class="pbody">
             <div class="nm">HOC（hoc_cheesecake） <span class="src">e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市中央区天神 5-10-1 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=HOC%20%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i> 福岡市中央区天神 5-10-1 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 10:00–18:00</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：無麩質起司蛋糕、甜點盤（5 月有草莓）</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=HOC%20%E3%83%81%E3%83%BC%E3%82%BA%E3%82%B1%E3%83%BC%E3%82%AD%20%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
@@ -653,20 +637,18 @@
             <div class="thumb ph"><i data-lucide="cup-soda"></i></div>
             <div class="pbody">
             <div class="nm">&amp;LOCALS 大濠公園 <span class="src">e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市中央区大濠公園 1-9 大濠テラス 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%26LOCALS%20%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92"><i data-lucide="map-pin"></i> 福岡市中央区大濠公園 1-9 大濠テラス 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 9:00–18:30，週一休</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：八女茶特調、草莓紅茶氣泡飲</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%26LOCALS%20%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
             <div class="thumb ph"><i data-lucide="coffee"></i></div>
             <div class="pbody">
             <div class="nm">Blue Bottle Coffee 福岡天神 Cafe <span class="src">e.ma.um</span></div>
-            <div class="addr"><i data-lucide="map-pin"></i> 福岡市中央区天神 2-2-20 警固神社社務所ビル 1F</div>
+            <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Blue%20Bottle%20Coffee%20%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i> 福岡市中央区天神 2-2-20 警固神社社務所ビル 1F</a>
             <div class="addr"><i data-lucide="clock"></i> 8:00–20:00</div>
             <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：咖啡（部落客覺得普通，可順路）</div>
-            <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Blue%20Bottle%20Coffee%20%E7%A6%8F%E5%B2%A1%E5%A4%A9%E7%A5%9E"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
@@ -699,19 +681,17 @@
             <img class="thumb" data-gid="s16" alt="" loading="lazy">
             <div class="pbody">
               <div class="nm">茅乃舍 高湯包（久原本家） <span class="src">annie.hwey.liao</span></div>
-              <div class="addr"><i data-lucide="map-pin"></i> 久原本家 椒房庵・茅乃舎：福岡市博多区博多駅中央街 1-1（博多站內，8:00–21:00 無休）</div>
+              <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E4%B9%85%E5%8E%9F%E6%9C%AC%E5%AE%B6%20%E8%8C%85%E4%B9%83%E8%88%8E%20%E5%8D%9A%E5%A4%9A%E9%A7%85"><i data-lucide="map-pin"></i> 久原本家 椒房庵・茅乃舎：福岡市博多区博多駅中央街 1-1（博多站內，8:00–21:00 無休）</a>
               <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：招牌高湯包，清甜療癒；現場可試喝、可免稅。建議先買幾包試喝，回台前再回購四入裝</div>
-              <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E4%B9%85%E5%8E%9F%E6%9C%AC%E5%AE%B6%20%E8%8C%85%E4%B9%83%E8%88%8E%20%E5%8D%9A%E5%A4%9A%E9%A7%85"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
           <div class="fplace">
             <img class="thumb" data-gid="s24" alt="" loading="lazy">
             <div class="pbody">
               <div class="nm">島本 明太子（博多阪急） <span class="src">kumacarrey</span></div>
-              <div class="addr"><i data-lucide="map-pin"></i> 博多阪急 站前／阪急地下街（博多站）</div>
+              <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%B3%B6%E6%9C%AC%20%E6%98%8E%E5%A4%AA%E5%AD%90%20%E5%8D%9A%E5%A4%9A%E9%98%AA%E6%80%A5"><i data-lucide="map-pin"></i> 博多阪急 站前／阪急地下街（博多站）</a>
               <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：明太子醬（一人限購一條）</div>
               <div class="note2"><i data-lucide="triangle-alert"></i> <b>第一天早點來買</b>，太晚很多口味完售；附免費小保冷劑，建議自備保冷袋（或先去 3COINS 買保冷袋）。</div>
-              <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E5%B3%B6%E6%9C%AC%20%E6%98%8E%E5%A4%AA%E5%AD%90%20%E5%8D%9A%E5%A4%9A%E9%98%AA%E6%80%A5"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
@@ -721,9 +701,8 @@
             <img class="thumb" data-gid="s27" alt="" loading="lazy">
             <div class="pbody">
               <div class="nm">15 度水蜜桃（運河城旁商店街小蔬果店） <span class="src">kumacarrey</span></div>
-              <div class="addr"><i data-lucide="map-pin"></i> 博多運河城旁商店街（上川端）；附近有前田屋／華味鳥／鰻魚飯</div>
+              <a class="addr maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E5%B7%9D%E7%AB%AF%E5%95%86%E5%BA%97%E8%A1%97%20%E5%8D%9A%E5%A4%9A"><i data-lucide="map-pin"></i> 博多運河城旁商店街（上川端）；附近有前田屋／華味鳥／鰻魚飯</a>
               <div class="dish"><i data-lucide="utensils"></i> <b>推薦</b>：15 度水蜜桃，超甜超香超多汁；草莓也很欠買</div>
-              <div class="maps"><a class="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E5%B7%9D%E7%AB%AF%E5%95%86%E5%BA%97%E8%A1%97%20%E5%8D%9A%E5%A4%9A"><i data-lucide="map-pin"></i>Google Map</a></div>
             </div>
           </div>
         </div>
