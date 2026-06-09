@@ -224,6 +224,11 @@
   .mw .row svg{width:14px;height:14px;color:var(--good)}
   .mw a.maplink{color:var(--good);font-weight:600;text-decoration:none}
   .mw a.maplink:hover{text-decoration:underline}
+
+  .irow{align-items:center}
+  .ichk{width:16px;height:16px;accent-color:var(--good);flex:0 0 auto;cursor:pointer;margin:0}
+  .irow.done .iact{text-decoration:line-through;color:var(--sub)}
+  .irow.done .itime{opacity:.45}
 </style>
 </head>
 <body id="top">
@@ -258,30 +263,30 @@
       <div class="card">
         <div class="iday">
           <div class="idate">6/10（三）<span class="tag">抵達日</span></div>
-          <div class="irow"><span class="itime">05:20</span><span class="iact">出門</span></div>
-          <div class="irow"><span class="itime">05:40</span><span class="iact">機捷直達車（A3 新北產業園區 → A13 機場第二航廈）</span></div>
-          <div class="irow"><span class="itime">08:00</span><span class="iact">桃園國際機場 T2 起飛 · BR106</span></div>
-          <div class="irow"><span class="itime">11:20</span><span class="iact">抵達 福岡機場 T-I</span></div>
-          <div class="irow"><span class="itime">16:00</span><span class="iact">肉屋 肉一 博多店（提前排隊）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E8%82%89%E5%B1%8B%20%E8%82%89%E4%B8%80%20%E5%8D%9A%E5%A4%9A%E5%BA%97" target="_blank">博多駅南 1-2-18 エムビル 1F</a></span></span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i1"><span class="itime">05:20</span><span class="iact">出門</span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i2"><span class="itime">05:40</span><span class="iact">機捷直達車（A3 新北產業園區 → A13 機場第二航廈）</span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i3"><span class="itime">08:00</span><span class="iact">桃園國際機場 T2 起飛 · BR106</span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i4"><span class="itime">11:20</span><span class="iact">抵達 福岡機場 T-I</span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i5"><span class="itime">16:00</span><span class="iact">肉屋 肉一 博多店（提前排隊）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E8%82%89%E5%B1%8B%20%E8%82%89%E4%B8%80%20%E5%8D%9A%E5%A4%9A%E5%BA%97" target="_blank">博多駅南 1-2-18 エムビル 1F</a></span></span></div>
         </div>
         <div class="iday">
           <div class="idate">6/11（四）</div>
-          <div class="irow"><span class="itime">09:30</span><span class="iact">海洋世界 海之中道（九州規模最大水族館）<span class="sub"><a href="#marineworld">↓ 詳細資訊與表演時刻</a></span></span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i6"><span class="itime">09:30</span><span class="iact">海洋世界 海之中道（九州規模最大水族館）<span class="sub"><a href="#marineworld">↓ 詳細資訊與表演時刻</a></span></span></div>
         </div>
         <div class="iday">
           <div class="idate">6/12（五）</div>
-          <div class="irow"><span class="itime">14:00</span><span class="iact">熊本熊部長（くまモン）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%BE%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%20%E7%86%8A%E6%9C%AC" target="_blank">くまモンスクエア（熊本市）</a></span></span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i7"><span class="itime">14:00</span><span class="iact">熊本熊部長（くまモン）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%BE%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%20%E7%86%8A%E6%9C%AC" target="_blank">くまモンスクエア（熊本市）</a></span></span></div>
         </div>
         <div class="iday">
           <div class="idate">6/13（六）</div>
-          <div class="irow"><span class="itime">10:30</span><span class="iact">筥崎宮 繡球花祭典<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E7%AD%A5%E5%B4%8E%E5%AE%AE" target="_blank">筥崎宮</a></span></span></div>
-          <div class="irow"><span class="itime">11:30</span><span class="iact">大東園 本店 燒肉（訂位）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%9D%B1%E5%9C%92%20%E6%9C%AC%E5%BA%97%20%E4%B8%8A%E5%B7%9D%E7%AB%AF%20%E5%8D%9A%E5%A4%9A" target="_blank">福岡市博多区上川端町 1-1-1</a></span></span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i8"><span class="itime">10:30</span><span class="iact">筥崎宮 繡球花祭典<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E7%AD%A5%E5%B4%8E%E5%AE%AE" target="_blank">筥崎宮</a></span></span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i9"><span class="itime">11:30</span><span class="iact">大東園 本店 燒肉（訂位）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%9D%B1%E5%9C%92%20%E6%9C%AC%E5%BA%97%20%E4%B8%8A%E5%B7%9D%E7%AB%AF%20%E5%8D%9A%E5%A4%9A" target="_blank">福岡市博多区上川端町 1-1-1</a></span></span></div>
         </div>
         <div class="iday">
           <div class="idate">6/14（日）<span class="tag">回程日</span></div>
-          <div class="irow"><span class="itime">17:00</span><span class="iact">抵達 福岡機場 T-I</span></div>
-          <div class="irow"><span class="itime">19:20</span><span class="iact">福岡機場 起飛 · BR101</span></div>
-          <div class="irow"><span class="itime">20:45</span><span class="iact">抵達 桃園國際機場 T2</span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i10"><span class="itime">17:00</span><span class="iact">抵達 福岡機場 T-I</span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i11"><span class="itime">19:20</span><span class="iact">福岡機場 起飛 · BR101</span></div>
+          <div class="irow"><input type="checkbox" class="ichk" data-ik="i12"><span class="itime">20:45</span><span class="iact">抵達 桃園國際機場 T2</span></div>
         </div>
       </div>
 
@@ -892,6 +897,17 @@
       cb.closest(".shop").classList.toggle("done",cb.checked);
       saved[id]=cb.checked;
       localStorage.setItem(KEY,JSON.stringify(saved));
+    });
+  });
+  // itinerary checklist
+  const IKEY="fukuoka_itin_2026";
+  const isaved=JSON.parse(localStorage.getItem(IKEY)||"{}");
+  document.querySelectorAll(".irow .ichk").forEach(cb=>{
+    const id=cb.dataset.ik;
+    if(isaved[id]){cb.checked=true;cb.closest(".irow").classList.add("done");}
+    cb.addEventListener("change",()=>{
+      cb.closest(".irow").classList.toggle("done",cb.checked);
+      isaved[id]=cb.checked;localStorage.setItem(IKEY,JSON.stringify(isaved));
     });
   });
   document.getElementById("reset").addEventListener("click",e=>{
