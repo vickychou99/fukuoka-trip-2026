@@ -205,6 +205,25 @@
   .kvaddr{color:var(--ink);text-decoration:none;display:inline-flex;align-items:center;gap:4px}
   .kvaddr:hover{color:var(--good);text-decoration:underline}
   .kvaddr svg{width:14px;height:14px;color:var(--good);flex-shrink:0}
+
+  /* itinerary timeline */
+  .iday{padding-top:12px}
+  .iday+.iday{border-top:1px dashed var(--line)}
+  .iday:first-child{padding-top:0}
+  .idate{font-weight:700;color:var(--accent);margin-bottom:6px;font-size:15px;display:flex;align-items:center;gap:7px}
+  .idate .tag{margin:0}
+  .irow{display:flex;gap:10px;padding:3px 0;font-size:14px;align-items:baseline}
+  .itime{flex:0 0 52px;color:var(--accent2);font-weight:700;font-variant-numeric:tabular-nums}
+  .iact{flex:1;color:var(--ink);line-height:1.5}
+  .iact .sub{display:block;font-size:12px;color:var(--sub)}
+  .iact a{color:var(--good);font-weight:600;text-decoration:none}
+  .iact a:hover{text-decoration:underline}
+  .mw{margin-top:14px}
+  .mw .row{display:flex;gap:8px;font-size:13.5px;margin:5px 0;line-height:1.55}
+  .mw .row b{color:var(--sub);font-weight:600;flex:0 0 auto;display:inline-flex;align-items:center;gap:4px}
+  .mw .row svg{width:14px;height:14px;color:var(--good)}
+  .mw a.maplink{color:var(--good);font-weight:600;text-decoration:none}
+  .mw a.maplink:hover{text-decoration:underline}
 </style>
 </head>
 <body id="top">
@@ -217,6 +236,7 @@
 
 <!-- 🔖 快速導覽 -->
 <nav class="nav">
+  <a href="#itinerary"><i data-lucide="calendar"></i> 行程</a>
   <a href="#flight"><i data-lucide="plane"></i> 機票</a>
   <a href="#hotel"><i data-lucide="bed-double"></i> 住宿</a>
   <a href="#baby"><i data-lucide="baby"></i> 嬰幼兒</a>
@@ -230,6 +250,55 @@
 </nav>
 
 <div class="wrap">
+
+  <!-- 📅 行程表 -->
+  <details class="sec" open id="itinerary">
+    <summary><span class="ic"><i data-lucide="calendar"></i></span>行程表<span class="chev">▶</span></summary>
+    <div class="sec-body">
+      <div class="card">
+        <div class="iday">
+          <div class="idate">6/10（三）<span class="tag">抵達日</span></div>
+          <div class="irow"><span class="itime">05:20</span><span class="iact">出門</span></div>
+          <div class="irow"><span class="itime">05:40</span><span class="iact">機捷直達車（A3 新北產業園區 → A13 機場第二航廈）</span></div>
+          <div class="irow"><span class="itime">08:00</span><span class="iact">桃園國際機場 T2 起飛 · BR106</span></div>
+          <div class="irow"><span class="itime">11:20</span><span class="iact">抵達 福岡機場 T-I</span></div>
+          <div class="irow"><span class="itime">16:00</span><span class="iact">肉屋 肉一 博多店（提前排隊）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E8%82%89%E5%B1%8B%20%E8%82%89%E4%B8%80%20%E5%8D%9A%E5%A4%9A%E5%BA%97" target="_blank">博多駅南 1-2-18 エムビル 1F</a></span></span></div>
+        </div>
+        <div class="iday">
+          <div class="idate">6/11（四）</div>
+          <div class="irow"><span class="itime">09:30</span><span class="iact">海洋世界 海之中道（九州規模最大水族館）<span class="sub"><a href="#marineworld">↓ 詳細資訊與表演時刻</a></span></span></div>
+        </div>
+        <div class="iday">
+          <div class="idate">6/12（五）</div>
+          <div class="irow"><span class="itime">14:00</span><span class="iact">熊本熊部長（くまモン）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%BE%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%AF%E3%82%A8%E3%82%A2%20%E7%86%8A%E6%9C%AC" target="_blank">くまモンスクエア（熊本市）</a></span></span></div>
+        </div>
+        <div class="iday">
+          <div class="idate">6/13（六）</div>
+          <div class="irow"><span class="itime">10:30</span><span class="iact">筥崎宮 繡球花祭典<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E7%AD%A5%E5%B4%8E%E5%AE%AE" target="_blank">筥崎宮</a></span></span></div>
+          <div class="irow"><span class="itime">11:30</span><span class="iact">大東園 本店 燒肉（訂位）<span class="sub"><a href="https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%9D%B1%E5%9C%92%20%E6%9C%AC%E5%BA%97%20%E4%B8%8A%E5%B7%9D%E7%AB%AF%20%E5%8D%9A%E5%A4%9A" target="_blank">福岡市博多区上川端町 1-1-1</a></span></span></div>
+        </div>
+        <div class="iday">
+          <div class="idate">6/14（日）<span class="tag">回程日</span></div>
+          <div class="irow"><span class="itime">17:00</span><span class="iact">抵達 福岡機場 T-I</span></div>
+          <div class="irow"><span class="itime">19:20</span><span class="iact">福岡機場 起飛 · BR101</span></div>
+          <div class="irow"><span class="itime">20:45</span><span class="iact">抵達 桃園國際機場 T2</span></div>
+        </div>
+      </div>
+
+      <div class="card mw" id="marineworld">
+        <h3><i data-lucide="fish"></i> 海洋世界 海之中道（マリンワールド海の中道）　<span style="font-weight:400;font-size:13px;color:var(--sub)">6/11 行程</span></h3>
+        <div class="row"><b><i data-lucide="map-pin"></i>地址</b><a class="maplink" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%E3%83%9E%E3%83%AA%E3%83%B3%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E6%B5%B7%E3%81%AE%E4%B8%AD%E9%81%93">福岡市東区西戸崎 18-28（海の中道海浜公園内）</a></div>
+        <div class="row"><b><i data-lucide="clock"></i>時間</b><span>9:30–17:30（入館截止 17:00）</span></div>
+        <div class="row"><b><i data-lucide="ticket"></i>票價</b><span>大人 ¥2,500／中小學生 ¥1,200／幼兒（3 歲以上）¥700／65 歲以上 ¥2,200</span></div>
+        <div class="row"><b><i data-lucide="train-front"></i>交通</b><span>JR 博多→香椎換 JR 海ノ中道駅（約 30 分）步行 5 分；或博多埠頭搭 UMINAKA 渡船（約 20 分）</span></div>
+        <div class="row"><b><i data-lucide="drama"></i>表演</b><span>海豚海獅秀 11:00／13:30／15:30；海豹 10:40；企鵝散步 12:20；外海大水槽 11:45·13:00·15:00；企鵝晚安 16:10（時刻每日異動，以官網為準）</span></div>
+        <div style="margin-top:8px">
+          <a class="lk" target="_blank" href="https://marine-world.jp/show_schedule/post-7987/"><i data-lucide="external-link"></i>表演時刻表（官網）</a>
+          <a class="lk" target="_blank" href="https://www.bring-you.info/zh-tw/marine-world-uminonakamichi"><i data-lucide="external-link"></i>中文攻略</a>
+        </div>
+      </div>
+    </div>
+  </details>
 
   <!-- ✈ 機票 -->
   <details class="sec" open id="flight">
